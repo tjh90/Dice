@@ -22,3 +22,10 @@ jobs:
 
     - name: Build with Maven
       run: mvn -ntp install
+
+    - name: Report test results
+      uses: dorny/test-reporter@v3
+      with:
+        name: JUnit test results
+        path: '**/TEST-*.xml'
+        reporter: java-junit
