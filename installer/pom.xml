@@ -1,7 +1,6 @@
-<project
-        xmlns="http://maven.apache.org/POM/4.0.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>installer</artifactId>
@@ -54,16 +53,16 @@
                             <goal>unpack</goal>
                         </goals>
                         <configuration>
-                           <artifactItems>
-                               <artifactItem>
-                                   <groupId>dice</groupId>
-                                   <artifactId>ui</artifactId>
-                                   <version>${project.version}</version>
-                                   <type>jar</type>
-                                   <includes>**/*.ico</includes>
-                               </artifactItem>
-                           </artifactItems>
-                           <outputDirectory>${project.build.directory}</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>dice</groupId>
+                                    <artifactId>ui</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>jar</type>
+                                    <includes>**/*.ico</includes>
+                                </artifactItem>
+                            </artifactItems>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
@@ -87,7 +86,7 @@
                                     <arg value="--add-modules" />
                                     <arg value="javafx.controls,javafx.fxml" />
                                     <arg value="--compress" />
-                                    <arg value="2" />
+                                    <arg value="zip-6" />
                                     <arg value="--no-header-files" />
                                     <arg value="--no-man-pages" />
                                     <arg value="--output" />
@@ -136,7 +135,8 @@
                         </goals>
                         <configuration>
                             <target>
-                                <zip destfile="Dice-${project.version}.zip" basedir="${jpackage.dir}" />
+                                <zip destfile="Dice-${project.version}.zip"
+                                    basedir="${jpackage.dir}" />
                             </target>
                         </configuration>
                     </execution>
