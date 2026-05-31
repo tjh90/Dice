@@ -18,7 +18,7 @@ A small Java program to simulate dice rolls.
 
 ## Building from source
 
-The source code can be built using [maven](https://maven.apache.org/index.html). Java v20 and JavaFX v20 will also need to be installed. The build can be performed by running the following command:
+The source code can be built using [maven](https://maven.apache.org/index.html). Java v25 and JavaFX v25 will also need to be installed. The build can be performed by running the following command:
 
 ``` bash
 mvn clean install -D"javafx.jmods.path=[Path to JavaFX jmods directory]"
